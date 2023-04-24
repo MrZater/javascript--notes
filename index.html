@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+    </style>
+    <script src="./myFunction.js"></script>
+    <script src="./helpers.js"></script>
+    <script>
+        function getNumber(...arr) {
+            console.log()
+            let min = arr[0];
+            let minIndex = 0;
+            let max = arr[0];
+            let maxIndex = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                    maxIndex = i;
+                }
+                if (arr[i] < min) {
+                    min = arr[i];
+                    minIndex = i;
+                }
+            }
+            return {
+                min,
+                max,
+                minIndex,
+                maxIndex
+            };
+
+        }
+        let arr = [2, 4, 6, 8, 4, 7, 9, 3, 2, 2, 1]
+        console.log(getNumber(...arr))
+
+
+        // function sum(...args) {
+        //     //将剩余所有的参数收集到args数组中
+        //     let sum = 0;
+        //     for (let i = 0; i < args.length; i++) {
+        //         sum += args[i];
+        //     }
+        //     return sum;
+        // }
+        // console.log(sum(1, 2, 3));
+
+    </script>
+</body>
+
+</html>
